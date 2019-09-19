@@ -1,0 +1,571 @@
+{
+	"info": {
+		"_postman_id": "82bbf83e-ce61-46fa-8383-bac40973ff79",
+		"name": "Recipes App",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Create new Receipe",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE1Njc5NDE3OTAsImlhdCI6MTU2NjczMjE5MCwic3ViIjoiNWNlMzhjM2Y1NzkwMjUyZDA4YmM0ZjZlIn0.GRZth1aiqyap1V4p3N3U_HyrwDty0C1C4Tx7bWjmNuY",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"title\": \"Paneer Butter Masala\",\n\t\"description\": \"Paneer also known as cottage cheese is traditionally used in Indian cuisine which defines sumptuousness in vegetarian feast. A north Indian fare most popular for it's buttery onion tomato sauce.\",\n\t\"user_id\": 5\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8000/api/recipe",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"recipe"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "All Receipes",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE1Njc5NDE3OTAsImlhdCI6MTU2NjczMjE5MCwic3ViIjoiNWNlMzhjM2Y1NzkwMjUyZDA4YmM0ZjZlIn0.GRZth1aiqyap1V4p3N3U_HyrwDty0C1C4Tx7bWjmNuY",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:8000/api/recipes",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"recipes"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Single  Receipe",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE1Njc5NDE3OTAsImlhdCI6MTU2NjczMjE5MCwic3ViIjoiNWNlMzhjM2Y1NzkwMjUyZDA4YmM0ZjZlIn0.GRZth1aiqyap1V4p3N3U_HyrwDty0C1C4Tx7bWjmNuY",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:8000/api/recipe/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"recipe",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update Single  Receipe",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE1Njc5NDE3OTAsImlhdCI6MTU2NjczMjE5MCwic3ViIjoiNWNlMzhjM2Y1NzkwMjUyZDA4YmM0ZjZlIn0.GRZth1aiqyap1V4p3N3U_HyrwDty0C1C4Tx7bWjmNuY",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"description\": \"American chop suey is believed to be invented by Chinese immigrants in America in 1880's. A dish consisting of meat, veggies and noodles cooked quickly in sweet and tangy thickened sauce. A meal by itself!\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8000/api/recipe/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"recipe",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete Single  Receipe",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE1Njc5NDE3OTAsImlhdCI6MTU2NjczMjE5MCwic3ViIjoiNWNlMzhjM2Y1NzkwMjUyZDA4YmM0ZjZlIn0.GRZth1aiqyap1V4p3N3U_HyrwDty0C1C4Tx7bWjmNuY",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:8000/api/recipe/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"recipe",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Add Ingredient to Receipe",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE1Njc5NDE3OTAsImlhdCI6MTU2NjczMjE5MCwic3ViIjoiNWNlMzhjM2Y1NzkwMjUyZDA4YmM0ZjZlIn0.GRZth1aiqyap1V4p3N3U_HyrwDty0C1C4Tx7bWjmNuY",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"recipe_id\": \"American Chopsuey\",\n\t\"name\":\"\",\n\t\"quantity\": 3,\n\t\"unit\": \"\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8000/api/recipe/ingredient",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"recipe",
+						"ingredient"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "List all Ingredient for Given Receipe",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE1Njc5NDE3OTAsImlhdCI6MTU2NjczMjE5MCwic3ViIjoiNWNlMzhjM2Y1NzkwMjUyZDA4YmM0ZjZlIn0.GRZth1aiqyap1V4p3N3U_HyrwDty0C1C4Tx7bWjmNuY",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:8000/api/recipe/ingredients/2",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"recipe",
+						"ingredients",
+						"2"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update Ingredient by id",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE1Njc5NDE3OTAsImlhdCI6MTU2NjczMjE5MCwic3ViIjoiNWNlMzhjM2Y1NzkwMjUyZDA4YmM0ZjZlIn0.GRZth1aiqyap1V4p3N3U_HyrwDty0C1C4Tx7bWjmNuY",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"quantity\": 0.006\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8000/api/recipe/ingredients/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"recipe",
+						"ingredients",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete Ingredient by id",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE1Njc5NDE3OTAsImlhdCI6MTU2NjczMjE5MCwic3ViIjoiNWNlMzhjM2Y1NzkwMjUyZDA4YmM0ZjZlIn0.GRZth1aiqyap1V4p3N3U_HyrwDty0C1C4Tx7bWjmNuY",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"quantity\": 0.006\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8000/api/recipe/ingredient/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"recipe",
+						"ingredient",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create new Step for Recipe",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE1Njc5NDE3OTAsImlhdCI6MTU2NjczMjE5MCwic3ViIjoiNWNlMzhjM2Y1NzkwMjUyZDA4YmM0ZjZlIn0.GRZth1aiqyap1V4p3N3U_HyrwDty0C1C4Tx7bWjmNuY",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"recipe_id\": 2,\n\t\"step_order\": 1,\n\t\"description\": \"Heat oil in a pan, add cut vegetables and saute for a minute.\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8000/api/recipe/step",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"recipe",
+						"step"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "List all Steps for Recipe id",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE1Njc5NDE3OTAsImlhdCI6MTU2NjczMjE5MCwic3ViIjoiNWNlMzhjM2Y1NzkwMjUyZDA4YmM0ZjZlIn0.GRZth1aiqyap1V4p3N3U_HyrwDty0C1C4Tx7bWjmNuY",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:8000/api/recipe/steps/2",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"recipe",
+						"steps",
+						"2"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update Step by id",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE1Njc5NDE3OTAsImlhdCI6MTU2NjczMjE5MCwic3ViIjoiNWNlMzhjM2Y1NzkwMjUyZDA4YmM0ZjZlIn0.GRZth1aiqyap1V4p3N3U_HyrwDty0C1C4Tx7bWjmNuY",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"description\": \"Heat oil in a pan, add cut vegetables and saute for one minute.\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8000/api/recipe/step/3",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"recipe",
+						"step",
+						"3"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete Step by id",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE1Njc5NDE3OTAsImlhdCI6MTU2NjczMjE5MCwic3ViIjoiNWNlMzhjM2Y1NzkwMjUyZDA4YmM0ZjZlIn0.GRZth1aiqyap1V4p3N3U_HyrwDty0C1C4Tx7bWjmNuY",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:8000/api/recipe/step/3",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"recipe",
+						"step",
+						"3"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}
